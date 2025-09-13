@@ -1,0 +1,583 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * --------------------------------
+ * ATURAN DASAR UNTUK SEMUA GAMBAR
+ * --------------------------------
+ */
+img {
+  /* Memastikan semua gambar responsif */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* * --------------------------------
+ * GAYA UMUM UNTUK BAGIAN (SECTIONS)
+ * --------------------------------
+ */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem; /* Ukuran font yang lebih besar */
+  font-weight: 700;
+  color: #1a202c; /* Warna teks gelap */
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #718096; /* Warna teks abu-abu */
+}
+
+/* * --------------------------------
+ * NAVIGASI
+ * --------------------------------
+ */
+.main-nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2b6cb0;
+}
+
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #4a5568;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2b6cb0;
+}
+
+.nav-cta-button {
+  background-color: #2b6cb0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.nav-cta-button:hover {
+  background-color: #2c5282;
+}
+
+
+/* * --------------------------------
+ * HERO SECTION
+ * --------------------------------
+ */
+.hero-section {
+  padding: 5rem 0;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    text-align: left;
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+.btn-primary {
+  background-color: #2b6cb0;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2c5282;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #2b6cb0;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66.66%; /* Rasio aspek 3:2 */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa terdistorsi */
+  border-radius: 1rem;
+}
+
+/* * --------------------------------
+ * SERVICES SECTION
+ * --------------------------------
+ */
+.section-services {
+  padding: 5rem 0;
+  background-color: #f7fafc;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  background-color: #e2e8f0;
+  color: #2b6cb0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+}
+
+.service-description {
+  color: #4a5568;
+}
+
+/* * --------------------------------
+ * PORTFOLIO SECTION
+ * --------------------------------
+ */
+.section-portfolio {
+  padding: 5rem 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 250px; /* Tinggi tetap untuk konsistensi */
+  object-fit: cover; /* Sangat penting untuk memangkas dan mengisi area gambar */
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+.portfolio-info {
+  padding: 1.5rem;
+}
+
+.portfolio-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-description {
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+
+/* * --------------------------------
+ * ABOUT SECTION
+ * --------------------------------
+ */
+.section-about {
+  padding: 5rem 0;
+  background-color: #f7fafc;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+  }
+}
+
+.about-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.about-image-wrapper {
+  width: 250px;
+  height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Fokuskan pada bagian atas foto */
+}
+
+.about-experience-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  right: -2rem;
+  background-color: #2b6cb0;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-experience-text-bold {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.about-experience-text {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.about-text-content {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-text-content {
+    text-align: left;
+  }
+}
+
+.about-text-intro {
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.about-text-body {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.about-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .about-skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2d3748;
+}
+
+.skill-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #2b6cb0;
+}
+
+/* * --------------------------------
+ * TESTIMONIALS SECTION
+ * --------------------------------
+ */
+.section-testimonials {
+  padding: 5rem 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rating-star {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #f6ad55;
+}
+
+/* * --------------------------------
+ * CONTACT SECTION
+ * --------------------------------
+ */
+.section-contact {
+  padding: 5rem 0;
+  background-color: #f7fafc;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column-reverse; /* Info di bawah form pada mobile */
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    flex-direction: row;
+  }
+}
+
+.contact-form-container {
+  flex: 1;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  color: #2d3748;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  background-color: #f7fafc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.btn-primary-lg {
+  background-color: #2b6cb0;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary-lg:hover {
+  background-color: #2c5282;
+}
+
+.contact-info-container {
+  flex: 1;
+}
+
+.contact-info-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* * --------------------------------
+ * FOOTER
+ * --------------------------------
+ */
+.main-footer {
+  background-color: #1a202c;
+  padding: 2.5rem 0;
+}
+
+.footer-text {
+  color: #cbd5e0;
+  font-size: 0.875rem;
+}
